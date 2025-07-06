@@ -1,0 +1,244 @@
+/* Space Missions Table Styles */
+
+/* Container and Wrapper */
+.space-missions-container {
+  padding: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.mission-table-wrapper {
+  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(139, 92, 246, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+/* Header Section */
+.table-header {
+  background: linear-gradient(90deg, #4338ca 0%, #7c3aed 100%);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.stars-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      2px 2px at 20px 30px,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    ),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.1), transparent),
+    radial-gradient(
+      1px 1px at 90px 40px,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 130px 80px,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    ),
+    radial-gradient(
+      2px 2px at 160px 30px,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  opacity: 0.3;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.header-subtitle {
+  color: #c4b5fd;
+  margin: 0;
+  font-size: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Table Container */
+.table-scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mission-data-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+/* Table Headers */
+.table-headers {
+  background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
+}
+
+.header-row {
+  border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.mission-name-header,
+.mission-category-header,
+.primary-objective-header,
+.commander-name-header,
+.commander-email-header,
+.commander-contact-header {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #67e8f9;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Table Body */
+.mission-entries-body {
+  background: transparent;
+}
+
+.mission-entry-row {
+  background: rgba(30, 41, 59, 0.5);
+  border-bottom: 1px solid rgba(71, 85, 105, 0.5);
+  transition: all 0.3s ease-in-out;
+  animation: fadeInUp 0.4s ease-out;
+  animation-fill-mode: both;
+}
+
+.mission-entry-row:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(88, 28, 135, 0.3) 0%,
+    rgba(67, 56, 202, 0.3) 100%
+  );
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+}
+
+.mission-entry-row:last-child {
+  border-bottom: none;
+}
+
+/* Table Cells */
+.mission-name-cell,
+.mission-category-cell,
+.primary-objective-cell,
+.commander-name-cell,
+.commander-email-cell,
+.commander-contact-cell {
+  padding: 1rem 1.5rem;
+  vertical-align: middle;
+}
+
+/* Mission Name Cell */
+.mission-name-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background: #67e8f9;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.mission-name-text {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+/* Category Badge */
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Other Cells */
+.primary-objective-cell {
+  color: #cbd5e1;
+}
+
+.commander-name-cell {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.email-link {
+  color: #67e8f9;
+  text-decoration: underline;
+  text-decoration-color: rgba(103, 232, 249, 0.5);
+  transition: all 0.2s ease;
+}
+
+.email-link:hover {
+  color: #22d3ee;
+  text-decoration-color: #22d3ee;
+}
+
+.commander-contact-cell {
+  color: #cbd5e1;
+}
+
+/* Footer */
+.table-footer {
+  background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-text {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
