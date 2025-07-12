@@ -3,7 +3,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <footer>
-      <p>&copy; 2024 Astro Nexus. All rights reserved.</p>
+      <p>&copy; 2025 Astro Nexus. All rights reserved.</p>
     </footer>
   );
 };
